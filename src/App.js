@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import { loginWithGoogle, onAuthStateChange, logOut } from './services/login'
+import ProfileCard from './components/ProfileCard'
+import { FcGoogle } from 'react-icons/fc'
 
-function App() {
+import './styles/App.css'
+
+function App () {
+  const [user, setUser] = useState(undefined)
+
+  const handleLogin = async () => {
+    loginWithGoogle().then(loggedUser => {
+      setUser(loggedUser)
+    })
+  }
+
+  const handleLogout = async () => {
+    logOut().then(setUser(undefined))
+  }
+
+  useEffect(() => {
+    onAuthStateChange(setUser)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Login</h1>
+
+      {!user
+        ? <button onClick={handleLogin}><FcGoogle />Login with Google</button>
+        : <ProfileCard {...user} logOut={handleLogout} />}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

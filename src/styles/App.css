@@ -1,0 +1,36 @@
+div {
+    background-color: indianred;
+    border-radius: 2%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 5vh;
+    text-align: center;
+    width: 50vw;
+}
+
+button {
+    align-items: center;
+    background-color: #000;
+    border: none;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+    padding: 8px 24px;
+    transition: scale .5s ease;
+    width: 80%;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button svg {
+    margin-right: 10px;
+}
+
+img {
+    border-radius: 50%;
+}
