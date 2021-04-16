@@ -1,0 +1,55 @@
+body {
+    background-color: indianred;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.card {
+    align-items: center;
+    background-color: #EB0B2B;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 8%;
+    overflow: hidden;
+    width: 800px;
+}
+
+div {
+    margin: auto;
+    width: 100%;
+}
+
+img {
+    height: 50%;
+    width: 50%;
+}
+
+button {
+    align-items: center;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 15px;
+    width: 60%;
+}
+
+button svg {
+    color: blue;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
