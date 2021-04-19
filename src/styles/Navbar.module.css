@@ -1,0 +1,32 @@
+.nav {
+    align-items: center;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav h4 {
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+.title h1{
+    font-weight: 400;
+}
+
+.title h1::after{
+    color: indianred;
+    content: ' Delivery';
+    font-weight: 700;
+}
+
+.search input{
+    border: 1px solid indianred;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+    padding: 5px 15px;
+    text-align: center;
+    width: 100%;
+}

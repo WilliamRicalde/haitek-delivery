@@ -11,7 +11,8 @@ export const loginWithGoogle = async () => {
         uid,
         email,
         name: displayName,
-        picture: photoURL
+        picture: photoURL,
+        logged: true
       }
     })
     .catch(e => console.log(e))
@@ -28,7 +29,8 @@ export const loginWithFacebook = async () => {
         uid,
         email,
         name: displayName,
-        picture: photoURL
+        picture: photoURL,
+        logged: true
       }
     })
     .catch(e => console.log(e))
@@ -42,7 +44,8 @@ export const onAuthStateChange = onChange => {
         uid,
         email,
         name: displayName,
-        picture: photoURL
+        picture: photoURL,
+        logged: true
       }
       onChange(normalizedUser)
     }
