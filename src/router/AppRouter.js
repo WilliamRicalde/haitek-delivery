@@ -4,8 +4,9 @@ import Home from '../pages/Home'
 import Feed from '../pages/Feed'
 import { userContext } from '../context/authContext'
 import { onAuthStateChange } from '../services/auth'
+import LoginCard from '../components/LoginCard'
 
-export const AppRoute = () => {
+export const AppRouter = () => {
   const { user, setUser } = useContext(userContext)
 
   useEffect(async () => {
@@ -21,6 +22,9 @@ export const AppRoute = () => {
         </Route>
         <Route path='/feed' exact>
           <Feed />
+        </Route>
+        <Route path='/test' exact>
+          <LoginCard />
         </Route>
       </Switch>
     </Router>

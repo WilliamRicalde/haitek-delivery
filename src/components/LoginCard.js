@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { loginWithGoogle, loginWithFacebook, logOut } from '../services/auth'
+import { loginWithGoogle, loginWithFacebook } from '../services/auth'
 import { userContext } from '../context/authContext'
 
 import { FcGoogle } from 'react-icons/fc'
@@ -7,7 +7,7 @@ import { FaFacebook } from 'react-icons/fa'
 
 import styles from '../styles/Login.module.css'
 
-function LoginCard () {
+function LoginCard ({ closeModal }) {
   const { user, setUser } = useContext(userContext)
   const { name } = user
 
@@ -23,10 +23,12 @@ function LoginCard () {
 
   return (
     <div className={styles.card}>
-      <img
-        src='https://images.unsplash.com/photo-1509482560494-4126f8225994'
-        alt='img'
-      />
+      <div style={styles.image}>
+        <img
+          src='https://images.unsplash.com/photo-1509482560494-4126f8225994'
+          alt='img'
+        />
+      </div>
       <div style={styles.text}>
         <h1>Login</h1>
         {user.name
@@ -36,9 +38,9 @@ function LoginCard () {
           <FcGoogle />Login with Google
         </button>
         <button onClick={handleLoginWithFacebook}>
-          <FaFacebook />Login with Facebook
+          <FaFacebook />Login with Fb
         </button>
-        <button onClick={() => logOut(setUser)}>LogOut</button>
+        <button onClick={closeModal}>Cerrar</button>
       </div>
     </div>
   )
