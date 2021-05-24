@@ -1,13 +1,13 @@
 .nav {
     align-items: center;
-    background-color: #fff;
-    color: #000;
+    background-color: #EF5350;
+    color: #fff;
     display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
+    justify-content: space-between;
+    padding: 1rem 4rem;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: auto;
 }
 
 .nav h4 {
@@ -16,13 +16,14 @@
 }
 
 .nav h4::before {
-    content: 'Hola ';
+    content: 'Hola, ';
     font-size: 1em;
     font-weight: 400;
 }
 
 .logout {
-    background-color: #fff;
+    background-color: #EF5350;
+    color: #fff;
     border: 0;
     cursor: pointer;
     font-size: 1.1em;
@@ -35,26 +36,16 @@
 }
 
 .title h1::after{
-    color: indianred;
+    color: #fff;
     content: ' Delivery';
     font-weight: 700;
 }
 
-.search input{
-    border: 1px solid indianred;
-    border-radius: 20px;
-    font-size: 1em;
-    outline: none;
-    padding: 5px 15px;
-    text-align: center;
-    width: 100%;
-}
-
 .loginButton {
-    background-color: indianred;
+    background-color: #fff;
     border: none;
     border-radius: 20px;
-    color: #ddd;
+    color: #000;
     cursor: pointer;
     font-size: 1em;
     outline: none;
@@ -63,17 +54,8 @@
 
 @media screen and (max-width: 767px) {
     .nav {
-        flex-direction: column;
         text-align: center;
         overflow: hidden;
-    }
-
-    .search {
-        overflow: hidden;
-    }
-
-    .search input {
-        width: 80%;
     }
 
     .nav h4 {

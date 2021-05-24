@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from 'react'
-import { userContext } from '../context/authContext'
+import { userContext } from '../../context/authContext'
 import { HiLogout } from 'react-icons/hi'
 import Modal from 'react-modal'
-import styles from '../styles/Navbar.module.css'
-import { logOut } from '../services/auth'
-import LoginCard from './LoginCard'
+import styles from './Navbar.module.css'
+import { logOut } from '../../services/auth'
+import LoginCard from '../Login'
 
 const Navbar = () => {
   const { user, setUser } = useContext(userContext)
@@ -23,7 +23,7 @@ const Navbar = () => {
       alignItems: 'center',
       background: 'rgba(255, 255, 255, 0)',
       border: 'none',
-      zIndex: '500'
+      zIndex: 30
     }
   }
 
@@ -39,9 +39,6 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <div className={styles.title}>
         <h1>Haitek</h1>
-      </div>
-      <div className={styles.search}>
-        <input type='text' name='search' placeholder='Buscar' />
       </div>
       {
         user.name

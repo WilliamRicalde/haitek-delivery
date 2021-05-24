@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'
-import DeliveryCard from '../components/DeliveryCard'
-import Animation from '../components/Animation'
-
-import deliverAnimation from '../assets/51053-delivery.json'
-import pizzaBanner from '../assets/pizza-banner.png'
-import styles from '../styles/Home.module.css'
 import { getDeliverys } from '../services/deliverys'
+import { FaUserCheck, FaCartPlus, FaBox } from 'react-icons/fa'
+import Navbar from '../components/Navigation'
+import DeliveryCard from '../components/DeliveryCard'
+import BannerSvg from '../components/BannerSvg'
+
+import styles from '../styles/Home.module.css'
 
 const Home = () => {
   const [deliverys, setDeliverys] = useState([])
@@ -18,24 +17,37 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <header className={styles.banner}>
-        <section className={styles.text}>
-          <h1>Haitek Delivery</h1>
-          <p>La comida que quieres, cuando quieres.</p>
-        </section>
+      <main className={styles.banner}>
+        <header>
+          <h1>La comida que quieres, cuando quieras</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos odit non laboriosam temporibus, mollitia deleniti.</p>
+          <button>Ordena ahora</button>
+        </header>
         <div>
-          <img src={pizzaBanner} alt='pizza' />
-          <a href='https://pngtree.com/so/food-clipart'>food clipart png from pngtree.com</a>
-        </div>
-      </header>
-      <main className={styles.application}>
-        <Animation lotti={deliverAnimation} width={350} height={350} />
-        <div>
-          <h2>Descarga nuestra aplicación</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod, deserunt?</p>
+          <BannerSvg />
         </div>
       </main>
-      <div className={styles.deliverys}>
+      <section className={styles.instructions}>
+        <h1>Es facil y rapido</h1>
+        <div className={styles.container}>
+          <div>
+            <FaUserCheck />
+            <h2>1. Elige tu delivery</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis consequatur numquam laborum.</p>
+          </div>
+          <div>
+            <FaCartPlus />
+            <h2>2. Realiza tu pedido</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius?</p>
+          </div>
+          <div>
+            <FaBox />
+            <h2>3. Recibe tu orden</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, optio?</p>
+          </div>
+        </div>
+      </section>
+      <section className={styles.deliverys}>
         <h1>Deliverys</h1>
         <section>
           {
@@ -43,7 +55,7 @@ const Home = () => {
           }
         </section>
         <button onClick={() => getDeliverys(setDeliverys)}>Test</button>
-      </div>
+      </section>
     </>
   )
 }

@@ -1,11 +1,11 @@
 import { useContext } from 'react'
-import { loginWithGoogle, loginWithFacebook } from '../services/auth'
-import { userContext } from '../context/authContext'
+import { loginWithGoogle, loginWithFacebook } from '../../services/auth'
+import { userContext } from '../../context/authContext'
 
 import { FcGoogle } from 'react-icons/fc'
 import { FaFacebook } from 'react-icons/fa'
 
-import styles from '../styles/Login.module.css'
+import styles from './Login.module.css'
 
 function LoginCard ({ closeModal }) {
   const { user, setUser } = useContext(userContext)
