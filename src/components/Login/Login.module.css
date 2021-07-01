@@ -1,0 +1,49 @@
+.card {
+    align-items: center;
+    background-color: indianred;
+    border-radius: 15px;
+    display: flex;
+    height: 50vh;
+    justify-content: space-between;
+    margin: auto;
+    overflow: hidden;
+    width: 50vw;
+}
+
+.card div {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+.card button {
+    align-items: center;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    color: aliceblue;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+    padding: 10px 15px;
+    width: 60%;
+}
+
+.card button svg {
+    color: blue;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.card button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}

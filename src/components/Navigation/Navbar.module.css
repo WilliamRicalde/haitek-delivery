@@ -1,0 +1,64 @@
+.nav {
+    align-items: center;
+    background-color: #EF5350;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0;
+    z-index: auto;
+}
+
+.nav h4 {
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+.nav h4::before {
+    content: 'Hola, ';
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.logout {
+    background-color: #EF5350;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 15px;
+    outline: none;
+}
+
+.title h1{
+    font-weight: 400;
+}
+
+.title h1::after{
+    color: #fff;
+    content: ' Delivery';
+    font-weight: 700;
+}
+
+.loginButton {
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+    outline: none;
+    padding: 5px 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .nav {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .nav h4 {
+        display: none;
+    }
+}

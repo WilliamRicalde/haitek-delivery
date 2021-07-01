@@ -1,35 +1,16 @@
-import { useState, useEffect } from 'react'
-import { loginWithGoogle, onAuthStateChange, logOut } from './services/login'
-import ProfileCard from './components/ProfileCard'
-import { FcGoogle } from 'react-icons/fc'
+import { useReducer } from 'react'
+import { authReducer, userContext } from './context/authContext'
+import { AppRouter } from './router/AppRouter'
 
-import './styles/App.css'
+import './styles/index.css'
 
 function App () {
-  const [user, setUser] = useState(undefined)
-
-  const handleLogin = async () => {
-    loginWithGoogle().then(loggedUser => {
-      setUser(loggedUser)
-    })
-  }
-
-  const handleLogout = async () => {
-    logOut().then(setUser(undefined))
-  }
-
-  useEffect(() => {
-    onAuthStateChange(setUser)
-  }, [])
+  const [user, dispatch] = useReducer(authReducer, { logged: false })
 
   return (
-    <div>
-      <h1>Login</h1>
-
-      {!user
-        ? <button onClick={handleLogin}><FcGoogle />Login with Google</button>
-        : <ProfileCard {...user} logOut={handleLogout} />}
-    </div>
+    <userContext.Provider value={{ user, dispatch }}>
+      <AppRouter />
+    </userContext.Provider>
   )
 }
 

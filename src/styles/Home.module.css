@@ -1,0 +1,135 @@
+.banner {
+    align-items: center;
+    background: linear-gradient(#EF5350 85%, white 15%);
+    color: #fff;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+.banner header {
+    margin-bottom: 12rem;
+    padding: 1.5rem;
+    text-align: center;
+    width: 50vw;
+}
+
+.banner button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: .9em;
+    margin-top: 1.5rem;
+    padding: .5em 1em;
+    outline: none;
+}
+
+.banner button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: all .1s ease;
+}
+
+.banner div {
+    margin-top: 15rem;
+    padding: 1rem;
+    width: 50%;
+}
+
+.banner svg {
+    height: 100%;
+    width: 100%;
+}
+
+.instructions {
+    margin: auto;
+    padding-top: 3rem;
+    text-align: center;
+    width: 90vw;
+}
+
+.instructions h1 {
+    font-size: 2rem;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.container div {
+    align-items: center;
+    background-color: #fdfdfd;
+    border-radius: .3rem;
+    box-shadow: 7px 7px 13px -3px rgba(239,83,80,0.40);
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: center;
+    width: 30%;
+}
+
+.container svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.container p {
+    font-size: 1.03rem;
+    line-height: 1.7rem;
+}
+
+.deliverys {
+    margin: auto;
+    padding-top: 5vh;
+    width: 95vw;
+}
+
+.deliverys section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .banner {
+        background: linear-gradient(#EF5350 90%, white 10%);
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    .banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .banner header {
+        margin: 0;
+        width: 80%;
+    }
+
+    .banner section {
+        margin: 0;
+        padding: 1rem;
+        width: 70%;
+    }
+
+    .deliverys section {
+        flex-direction: column;
+    }
+}
