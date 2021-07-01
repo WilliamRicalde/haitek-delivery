@@ -8,17 +8,15 @@ import { FaFacebook } from 'react-icons/fa'
 import styles from './Login.module.css'
 
 function LoginCard ({ closeModal }) {
-  const { user, setUser } = useContext(userContext)
+  const { user, dispatch } = useContext(userContext)
   const { name } = user
 
   const handleLoginWithGoogle = async () => {
-    const loggedUser = await loginWithGoogle()
-    setUser(loggedUser)
+    await loginWithGoogle(dispatch)
   }
 
   const handleLoginWithFacebook = async () => {
-    const loggedUser = await loginWithFacebook()
-    setUser(loggedUser)
+    await loginWithFacebook(dispatch)
   }
 
   return (
@@ -31,7 +29,7 @@ function LoginCard ({ closeModal }) {
       </div>
       <div style={styles.text}>
         <h1>Login</h1>
-        {user.name
+        {user?.name
           ? <h3>{`Hola ${name.split(' ')[0]}`}</h3>
           : <h3>Loggeate</h3>}
         <button onClick={handleLoginWithGoogle}>

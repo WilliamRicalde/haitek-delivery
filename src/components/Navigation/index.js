@@ -7,7 +7,7 @@ import { logOut } from '../../services/auth'
 import LoginCard from '../Login'
 
 const Navbar = () => {
-  const { user, setUser } = useContext(userContext)
+  const { user, dispatch } = useContext(userContext)
   const [modalIsOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
       {
         user.name
-          ? <h4>{user.name}<button className={styles.logout} onClick={() => logOut(setUser)}><HiLogout /></button></h4>
+          ? <h4>{user.name}<button className={styles.logout} onClick={() => logOut(dispatch)}><HiLogout /></button></h4>
           : <button className={styles.loginButton} onClick={openModal}>Entrar</button>
       }
       <Modal

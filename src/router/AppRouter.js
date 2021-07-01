@@ -5,11 +5,11 @@ import { userContext } from '../context/authContext'
 import { onAuthStateChange } from '../services/auth'
 
 export const AppRouter = () => {
-  const { user, setUser } = useContext(userContext)
+  const { user, dispatch } = useContext(userContext)
 
   useEffect(async () => {
-    onAuthStateChange(setUser)
-  }, [user.name])
+    onAuthStateChange(dispatch)
+  }, [user?.name])
 
   return (
     <Router>

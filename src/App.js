@@ -1,13 +1,16 @@
-import { UserAuthProvider } from './context/authContext'
+import { useReducer } from 'react'
+import { authReducer, userContext } from './context/authContext'
 import { AppRouter } from './router/AppRouter'
 
 import './styles/index.css'
 
 function App () {
+  const [user, dispatch] = useReducer(authReducer, { logged: false })
+
   return (
-    <UserAuthProvider>
+    <userContext.Provider value={{ user, dispatch }}>
       <AppRouter />
-    </UserAuthProvider>
+    </userContext.Provider>
   )
 }
 

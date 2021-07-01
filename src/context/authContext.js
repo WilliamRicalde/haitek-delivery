@@ -1,13 +1,22 @@
-import { createContext, useState } from 'react'
+import { createContext } from 'react'
+import { types } from './types'
 
 export const userContext = createContext()
 
-export function UserAuthProvider ({ children }) {
-  const [user, setUser] = useState({})
+export const authReducer = (state, action) => {
+  switch (action.type) {
+    case types.login:
+      return {
+        ...action.payload,
+        logged: true
+      }
 
-  return (
-    <userContext.Provider value={{ user, setUser }}>
-      {children}
-    </userContext.Provider>
-  )
+    case types.logout:
+      return {
+        logged: false
+      }
+
+    default:
+      return state
+  }
 }
