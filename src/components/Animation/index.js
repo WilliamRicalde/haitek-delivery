@@ -1,18 +1,15 @@
-import Lottie from 'react-lottie'
+import { Player } from '@lottiefiles/react-lottie-player'
 
 const Animation = ({ lotti, height, width }) => {
-  const defaultOption = {
-    loop: true,
-    autoplay: true,
-    animationData: lotti,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  }
-
   return (
     <>
-      <Lottie options={defaultOption} height={height} width={width} />
+      <Player
+        autoplay
+        loop
+        src={lotti}
+        height={height}
+        width={width}
+      />
     </>
   )
 }
