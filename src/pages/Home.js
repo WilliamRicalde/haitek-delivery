@@ -1,7 +1,7 @@
 import { FaUserCheck, FaCartPlus, FaBox } from 'react-icons/fa'
 import Navbar from '../components/Navigation'
 import Footer from '../components/Footer'
-import BannerSvg from '../components/BannerSvg'
+import Animation from '../components/Animation'
 
 import styles from '../styles/Home.module.css'
 
@@ -15,7 +15,7 @@ const Home = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eos odit non laboriosam temporibus, mollitia deleniti.</p>
         </header>
         <div>
-          <BannerSvg />
+          <Animation lotti='https://assets3.lottiefiles.com/packages/lf20_ngfmgkrn.json' width={650} height={600} />
         </div>
       </main>
       <section className={styles.instructions}>

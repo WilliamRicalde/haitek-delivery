@@ -21,34 +21,12 @@
     margin-bottom: 12rem;
     padding: 1.5rem;
     text-align: center;
-    width: 50vw;
-}
-
-.banner button {
-    background-color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: .9em;
-    margin-top: 1.5rem;
-    padding: .5em 1em;
-    outline: none;
-}
-
-.banner button:hover {
-    cursor: pointer;
-    transform: scale(1.08);
-    transition: all .1s ease;
+    width: 45vw;
 }
 
 .banner div {
-    margin-top: 15rem;
-    padding: 1rem;
-    width: 50%;
-}
-
-.banner svg {
-    height: 100%;
-    width: 100%;
+    margin-bottom: 3rem;
+    z-index: 0;
 }
 
 .instructions {

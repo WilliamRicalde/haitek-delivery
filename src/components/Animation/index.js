@@ -7,8 +7,7 @@ const Animation = ({ lotti, height, width }) => {
         autoplay
         loop
         src={lotti}
-        height={height}
-        width={width}
+        style={{ height: `${height}px`, width: `${width}px` }}
       />
     </>
   )
