@@ -43,7 +43,11 @@ const Navbar = () => {
       {
         user.name
           ? <h4>{user.name}<button className={styles.logout} onClick={() => logOut(dispatch)}><HiLogout /></button></h4>
-          : <button className={styles.loginButton} onClick={openModal}>Entrar</button>
+          : <div>
+            <button className={styles.loginButton} onClick={openModal}>Entrar</button>
+            <button className={styles.loginButton}>Registrarse</button>
+            {/* eslint-disable-next-line */}
+          </div>
       }
       <Modal
         isOpen={modalIsOpen}

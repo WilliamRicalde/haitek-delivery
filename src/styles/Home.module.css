@@ -1,6 +1,6 @@
 .banner {
     align-items: center;
-    background: linear-gradient(#EF5350 85%, white 15%);
+    background: #EF5350;
     color: #fff;
     display: flex;
     height: 90vh;
@@ -9,10 +9,12 @@
 
 .banner h1 {
     font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .banner p {
     font-size: 1rem;
+    font-weight: 400;
     line-height: 2rem;
     margin-top: 1rem;
 }
@@ -29,43 +31,47 @@
     z-index: 0;
 }
 
-.instructions {
-    margin: auto;
-    padding-top: 3rem;
-    text-align: center;
-    width: 90vw;
+.title {
+    display: none;
 }
 
-.instructions h1 {
+.instructions {
+    margin: auto;
+    width: 90vw;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.instructions h2 {
     font-size: 2rem;
+    font-weight: 500;
 }
 
 .container {
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
 }
 
 .container div {
-    align-items: center;
-    background-color: #fdfdfd;
-    border-radius: .3rem;
     display: flex;
     flex-direction: column;
-    height: 35vh;
+    align-items: center;
     justify-content: center;
+    height: 35vh;
     width: 30%;
+}
+
+.container h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 1rem;
 }
 
 .container svg {
     height: 2rem;
     width: 2rem;
-}
-
-.container p {
-    font-size: 1.03rem;
-    line-height: 1.7rem;
 }
 
 .deliverys {
@@ -74,17 +80,22 @@
     width: 95vw;
 }
 
-.deliverys section {
+.deliverys h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 2rem;
+}
+
+.deliveryContainer {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 20px;
+    margin: 2rem 0;
 }
 
 @media screen and (max-width: 767px) {
     .banner {
-        background: linear-gradient(#EF5350 90%, white 10%);
         flex-direction: column;
-        height: 50vh;
+        overflow: hidden;
     }
 
     .banner h1 {
@@ -100,10 +111,17 @@
         width: 80%;
     }
 
-    .banner section {
-        margin: 0;
-        padding: 1rem;
-        width: 70%;
+    .banner div {
+        display: none;
+    }
+
+    .title {
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
     }
 
     .deliverys section {

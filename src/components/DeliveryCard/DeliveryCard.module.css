@@ -1,14 +1,27 @@
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 30%;
+    margin: 1rem auto;
     border-radius: 10px;
     box-shadow: 5px 4px 13px -2px rgba(0,0,0,0.41);
-    height: 300px;
-    margin: 10px;
     overflow: hidden;
-    width: 30%;
 }
 
-.card h2 {
+.card img {
+    height: 200px;
+}
+
+.card  div {
+    height: 50%;
+    text-align: left;
+}
+
+.card h3 {
     font-size: 1.4em;
+    font-weight: 400;
     padding: 10px 15px;
 }
 

@@ -3,6 +3,7 @@
     background-color: #EF5350;
     color: #fff;
     display: flex;
+    height: 10vh;
     justify-content: space-between;
     padding: 1rem 4rem;
     position: sticky;
@@ -50,15 +51,20 @@
     font-size: 1em;
     outline: none;
     padding: 5px 15px;
+    margin: 0 5px;
 }
 
 @media screen and (max-width: 767px) {
     .nav {
         text-align: center;
+        justify-content: center;
         overflow: hidden;
+        padding: 1rem 0;
     }
 
-    .nav h4 {
+    .title {
         display: none;
     }
+    
+    
 }
