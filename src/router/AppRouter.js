@@ -1,27 +1,22 @@
-import { useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from '../pages/Home'
 import { userContext } from '../context/authContext'
-import { onAuthStateChange } from '../services/auth'
-import PrivateRoute from './PrivateRoute'
+import Home from '../pages/Home'
 import Feed from '../pages/Feed'
+import PrivateRoute from './PrivateRoute'
 
 export const AppRouter = () => {
-  const { user, dispatch } = useContext(userContext)
-
-  useEffect(async () => {
-    onAuthStateChange(dispatch)
-  }, [user?.name])
-
-  const isLogged = user?.logged
+  const { user } = useContext(userContext)
 
   return (
     <Router>
       <Switch>
-        <Route path='/' exact>
-          <Home />
-        </Route>
-        <PrivateRoute isLogged={isLogged} component={Feed} path='/feed' />
+        <Route exact path='/' component={Home} />
+        <PrivateRoute
+          path='/feed'
+          component={Feed}
+          isAuthenticated={user.logged}
+        />
       </Switch>
     </Router>
   )

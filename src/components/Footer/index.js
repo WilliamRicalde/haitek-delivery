@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import style from './Footer.module.css'
 
 const Footer = () => {
@@ -10,7 +12,7 @@ const Footer = () => {
       <div className={style.about}>
         <strong>Empresa</strong>
         <ul>
-          <li>Contacto</li>
+          <li><Link to='/feed'>Contaco</Link></li>
           <li>Nosotros</li>
           <li>Terminos y condiciones</li>
         </ul>
